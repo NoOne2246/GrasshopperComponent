@@ -1,5 +1,0 @@
-C:\Users\chris\Documents\Projects\GH\AS4600\AS4600\bin\AS4600.dll
-C:\Users\chris\Documents\Projects\GH\AS4600\AS4600\bin\AS4600.pdb
-C:\Users\chris\Documents\Projects\GH\AS4600\AS4600\obj\Debug\AS4600.csprojAssemblyReference.cache
-C:\Users\chris\Documents\Projects\GH\AS4600\AS4600\obj\Debug\AS4600.dll
-C:\Users\chris\Documents\Projects\GH\AS4600\AS4600\obj\Debug\AS4600.pdb
