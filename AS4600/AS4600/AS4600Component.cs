@@ -101,5 +101,42 @@ namespace AS4600
         }
     }
 
+    public class AS4600_M_bd : AS4600
+    {
 
+        public AS4600_M_bd() : base("AS4600 Mbd", "Mbd", "Description", "AS4600", "Bending")
+        {
+        }
+        private GH_InputParamManager AddInput(GH_InputParamManager pManager)
+        {
+            pManager.AddNumberParameter("fy", "fy", "Steel yield strength", GH_ParamAccess.item, 450.0);
+            return pManager;
+        }
+        private GH_OutputParamManager AddOutput(GH_OutputParamManager pManager)
+        {
+            pManager.AddNumberParameter("Mbd", "Mbd", "distortional buckling moment", GH_ParamAccess.item);
+            return pManager;
+        }
+
+        private IGH_DataAccess Solver(IGH_DataAccess DA)
+        {
+            Double fy = new Double();
+            DA.GetData(1, ref fy);
+            DA.SetData(1, fy);
+            return DA;
+        }
+
+        protected override System.Drawing.Bitmap Icon
+        {
+            get
+            {
+                return null;
+            }
+        }
+
+        public override Guid ComponentGuid
+        {
+            get { return new Guid("ec2e889a-d956-42a3-a7f6-c32559840b81"); }
+        }
+    }
 }
